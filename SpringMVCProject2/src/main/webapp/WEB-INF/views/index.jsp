@@ -8,10 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<% 	String msg = (String) request.getAttribute("msg");
-		if(!msg.isEmpty()){ %>
-		<h2><%=request.getAttribute("msg") %></h2>
-	<% } %>
+	<c:if test="${!msg.isEmpty()}">
+		<h2><c:out value="${msg }"></c:out> </h2>
+	</c:if>
 	<a href="addUser">Add Users</a><br>	
 	<a href="exstUser">Existing Users</a>	
 </body>
