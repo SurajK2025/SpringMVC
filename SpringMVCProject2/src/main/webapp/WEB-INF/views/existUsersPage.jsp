@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" import="com.model.Data"
+	import="java.util.List"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +12,15 @@
 <body>
 	<h3>Existing User</h3>
 	<table>
-		<tr><td><%= request.getParameter("fname")%></td></tr>
-		<tr><td><%= request.getParameter("lname")%></td></tr>
-		<tr><td><%= request.getParameter("email")%></td></tr>
+		<c:forEach items="${Users}" var="d">
+			<tr>
+				<td><c:out value="${d.userFname }"></c:out></td>
+				<td><c:out value="${d.userLname }"></c:out></td>
+				<td><c:out value="${d.email }"></c:out></td>
+			</tr>
+		</c:forEach>
 	</table>
+	<br>
+	<a href="addUser">Add another user</a>
 </body>
 </html>

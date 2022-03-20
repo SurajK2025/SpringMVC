@@ -8,9 +8,9 @@
 </head>
 <body>
 	<h3>Add User</h3>
-	<form method="post" action="existUsers">
-		<input type="text" name="fname" placeholder="Fname"><br>
-		<input type="text" name="lname" placeholder="Lname"><br>
+	<form method="post" action="index">
+		<input type="text" name="userFname" placeholder="Fname"><br>
+		<input type="text" name="userLname" placeholder="Lname"><br>
 		<input type="text" name="email" placeholder="Email">
 		<input type="submit" value="Submit">
 	</form>
