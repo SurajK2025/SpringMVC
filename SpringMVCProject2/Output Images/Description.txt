@@ -1,1 +1,1 @@
-Saving data in Servlet Context rather than in database.
+Saving data in database using hibernate
