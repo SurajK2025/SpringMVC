@@ -1,1 +1,1 @@
-Saving data in Servlet Context without using any database.
+In this project we are saving data in Servlet Context without using any database and displaying it to user.
